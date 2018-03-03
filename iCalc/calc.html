@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+< lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>calc</title>
+</head>
+
+
+<body>
+            <div id="container">
+                <div class="screen">
+                    <input id="display" value="0" disabled>
+                </div>
+
+                <div class="btns">
+                    <p>
+                        <button id="sin" class="button black">SIN</button>
+                        <button id="cos" class="button black">COS</button>
+                        <button id="tan" class="button black">TAN</button>
+                        <button value="(-)" class="button black" onclick="negate(display.value)">(-)</button>
+                        <button class="button black" onclick="display.value=Math.abs(display.value)">ABS</button>
+                        <button id="sqr" class="button black">√</button>
+                        <button class="button black" onclick="display.value=Math.pow((display.value),2)">SQR</button>
+                        <button onclick="displayarithmetricbutton(this.innerHTML)" class="button black">^</button>
+                        <button class="button black" onclick="display.value=Math.log(display.value)">LOG</button>
+                        <button class="button black" onclick="display.value=Math.E">In</button>
+                        <button id="can" onclick="reset()" class="button black">CLR</button>
+                        <button onclick="displaybrackets(this.innerHTML)" class="button black">(</button>
+                        <button onclick="displaybrackets(this.innerHTML)" class="button black">)</button>
+                        <button class="button black" onclick="display.value+='M+'">M+</button>
+                        <button onclick="displayarithmetricbutton(this.innerHTML)" class="button black">MOD</button>
+
+                        <button onclick="displaybutton(this.innerHTML)" class="button gray">7</button>
+                        <button onclick="displaybutton(this.innerHTML)" class="button gray">8</button>
+                        <button onclick="displaybutton(this.innerHTML)" class="button gray">9</button>
+                        <button id="del" onclick="dele()" class="button red">DEL</button>
+                        <button class="button red">EXIT</button>
+
+                        <button onclick="displaybutton(this.innerHTML)" class="button gray">4</button>
+                        <button onclick="displaybutton(this.innerHTML)" class="button gray">5</button>
+                        <button onclick="displaybutton(this.innerHTML)" class="button gray">6</button>
+                        <button onclick="displayarithmetricbutton(this.innerHTML)" class="button gray">*</button>
+                        <button onclick="displayarithmetricbutton(this.innerHTML)" class="button gray">/</button>
+
+                        <button onclick="displaybutton(this.innerHTML)" class="button gray">1</button>
+                        <button onclick="displaybutton(this.innerHTML)" class="button gray">2</button>
+                        <button onclick="displaybutton(this.innerHTML)" class="button gray">3</button>
+                        <button id="plus" onclick="displayarithmetricbutton(this.innerHTML)" class="button gray">+</button>
+                        <button onclick="displayarithmetricbutton(this.innerHTML)" class="button gray">-</button>
+
+
+
+                        <button onclick="displaydecbutton(this.innerHTML)" class="button gray">.</button>
+                        <button id="btnzero" onclick="displaybutton(this.innerHTML)" class="button gray">0</button>
+                        <button class="button gray" onclick="display.value+=Math.exp(display.value)">EXP</button>
+                        <button id="btnpie" onclick="displaybutton(this.innerHTML)" class="button gray">π</button>
+                        <button id="equ" onclick="equalto()" class="button green">=</button>
+                    </p>
+
+                </div>
+            </div>
+
+    <script src="activity.js"></script>
+</body>
+</html>
